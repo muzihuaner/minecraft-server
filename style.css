@@ -245,11 +245,14 @@ header > .title {
   .staff {
     display: block;
   }
-  
+
   .contact-form {
-	display: initial;
+    display: initial;
     padding-top: 20px;
     padding-bottom: 10px;
-	font-size: larger;
-}
+    font-size: larger;
+  }
+  .contact-form p {
+    font-size: large;
+  }
 }
