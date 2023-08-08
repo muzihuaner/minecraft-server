@@ -41,32 +41,33 @@
       <div class="status">
         <!-- <a href="https://www.mclists.cn/server/6452.html"><img  height="73px" width="444px" src="https://tietu.mclists.cn/banner/purple/6452/1.jpg"></img></a>
          -->
-         <a href="https://minecraft-mp.com/server-s315967" target="_blank"><img src="https://minecraft-mp.com/banner-315967-3.png" border="0" height="73px" width="444px"></a>
-   <br>
-   <div class="col-lg-4">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="card-title">服务器(基岩)</h5>
-      </div>
-      <div class="card-body">
-        <!-- <p class="card-text">状态: 在线</p>
-        <p class="card-text">玩家: 10/100</p> -->
-      </div>
+         <!-- <a href="https://minecraft-mp.com/server-s315967" target="_blank"><img src="https://minecraft-mp.com/banner-315967-3.png" border="0" height="73px" width="444px"></a> -->
+         <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">服务器(Java)</h5>
+            </div>
+            <div class="card-body-java">
+              <!-- <p class="card-text">状态: 在线</p>
+              <p class="card-text">玩家: 10/100</p> -->
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">服务器(基岩)</h5>
+            </div>
+            <div class="card-body">
+              <!-- <p class="card-text">状态: 在线</p>
+              <p class="card-text">玩家: 10/100</p> -->
+            </div>
+          </div>
+        </div>
+        </div>
     </div>
-  </div>
-  <div class="col-lg-4">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="card-title">服务器(Java)</h5>
-      </div>
-      <div class="card-body">
-        <p class="card-text">状态: <span id="status"></span></p>
-        <p class="card-text">IP：play.quickso.cn</p>
-        <p class="card-text">玩家: <span id="players"></span>/50</p>
-        <p class="card-text">版本：1.20.1</p>
-      </div>
-    </div>
-  </div>
+   
   
 </div>
 
@@ -179,18 +180,8 @@
   </div>
 </div>
 <!-- partial -->
-
 <script>
-  fetch('https://mcapi.us/server/status?ip=play.quickso.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('status').textContent = data.online ? '在线' : '离线';
-      document.getElementById('players').textContent = data.players.now;
-    })
-    .catch(error => console.error(error));
-</script>
-<script>
-  fetch('https://www.blmcpia.com/open-api/motdpe/api.php?ip=frp-bag.top&port=23435')
+  fetch('https://api.mcstatus.io/v2/status/bedrock/frp-bag.top:23435')
     .then(response => response.json())
     .then(data => {
       const card = document.querySelector('.card-body');
@@ -200,27 +191,54 @@
       //card.appendChild(title);
 
       const status = document.createElement('p');
-      status.textContent = `状态: ${data.status}`;
+      status.textContent = `状态: ${data.online? '在线' : '离线'}`;
       card.appendChild(status);
 
       const ip = document.createElement('p');
-      ip.textContent = `IP: ${data.ip}:${data.port}`;
+      ip.textContent = `IP: ${data.host}:${data.port}`;
       card.appendChild(ip);
 
       const players = document.createElement('p');
-      players.textContent = `玩家: ${data.online}/${data.max}`;
+      players.textContent = `玩家: ${data.players.online}/${data.players.max}`;
       card.appendChild(players);
 
       const version = document.createElement('p');
-      version.textContent = `版本: ${data.version}`;
+      version.textContent = `版本: ${data.version.name}`;
       card.appendChild(version);
 
-      const delay = document.createElement('p');
-      delay.textContent = `延迟: ${data.delay} ms`;
-      card.appendChild(delay);
-      card.innerHTML += '<a class="btn btn-primary" href="minecraft://?addExternalServer=Quck_MC_Server|frp-bag.top:23435">进入服务器</a>'
-      // 将卡片添加到页面中
+      // const delay = document.createElement('p');
+      // delay.textContent = `延迟: ${data.delay} ms`;
+      // card.appendChild(delay);
+      // card.innerHTML += '<a class="btn btn-primary" href="minecraft://?addExternalServer=Quck_MC_Server|frp-bag.top:23435">进入服务器</a>'
+      // // 将卡片添加到页面中
       //document.body.appendChild(card);
+    });
+
+
+    fetch('https://api.mcstatus.io/v2/status/java/play.quickso.cn')
+    .then(response => response.json())
+    .then(data => {
+      const card = document.querySelector('.card-body-java');
+      //card.classList.add('card');
+      //const title = document.createElement('h2');
+      //title.textContent = data.motd;
+      //card.appendChild(title);
+
+      const status = document.createElement('p');
+      status.textContent = `状态: ${data.online? '在线' : '离线'}`;
+      card.appendChild(status);
+
+      const ip = document.createElement('p');
+      ip.textContent = `IP: ${data.host}`;
+      card.appendChild(ip);
+
+      const players = document.createElement('p');
+      players.textContent = `玩家: ${data.players.online}/${data.players.max}`;
+      card.appendChild(players);
+
+      const version = document.createElement('p');
+      version.textContent = `版本: ${data.version.name_raw}`;
+      card.appendChild(version);
     });
 </script>
   
