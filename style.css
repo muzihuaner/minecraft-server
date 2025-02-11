@@ -51,7 +51,7 @@ a {
 
 .banner {
   width: 100%;
-  background: url("https://jsdelivr.quickso.cn/gh/muzihuaner/minecraft-server@main/imgs/banner.gif");
+  background: url("https://gcore.jsdelivr.net/gh/muzihuaner/minecraft-server@main/imgs/banner.gif");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -157,20 +157,20 @@ header > .title {
 }
 
 .card1 {
-  background-image: url("https://jsdelivr.quickso.cn/gh/muzihuaner/minecraft-server@main/imgs/card1.png");
+  background-image: url("https://gcore.jsdelivr.net/gh/muzihuaner/minecraft-server@main/imgs/card1.png");
 }
 
 .card2 {
-  background-image: url("https://jsdelivr.quickso.cn/gh/muzihuaner/minecraft-server@main/imgs/card2.png");
+  background-image: url("https://gcore.jsdelivr.net/gh/muzihuaner/minecraft-server@main/imgs/card2.png");
 }
 
 .card3 {
-  background-image: url("https://jsdelivr.quickso.cn/gh/muzihuaner/minecraft-server@main/imgs/card3.jpg");
+  background-image: url("https://gcore.jsdelivr.net/gh/muzihuaner/minecraft-server@main/imgs/card3.jpg");
 }
 
 .staff-area {
   width: 100%;
-  background: url("https://jsdelivr.quickso.cn/gh/muzihuaner/minecraft-server@main/imgs/staff-area.jpg");
+  background: url("https://gcore.jsdelivr.net/gh/muzihuaner/minecraft-server@main/imgs/staff-area.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
