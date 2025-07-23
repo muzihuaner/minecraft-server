@@ -12,126 +12,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.loli.net/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .minecraft-font {
-            font-family: 'Press Start 2P', cursive;
-        }
-
-        .pixel-border {
-            border: 4px solid #000;
-            box-shadow: 4px 4px 0px #000;
-        }
-
-        .pixel-button {
-            border: 3px solid #000;
-            box-shadow: 3px 3px 0px #000;
-            transition: all 0.1s ease;
-        }
-
-        .pixel-button:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 1px 1px 0px #000;
-        }
-
-        .pixel-button:active {
-            transform: translate(4px, 4px);
-            box-shadow: 0px 0px 0px #000;
-        }
-
-        .server-online {
-            background-color: #4ade80;
-        }
-
-        .server-offline {
-            background-color: #f87171;
-        }
-
-        .pixel-bg {
-            background-image:
-                linear-gradient(45deg, #8B4513 25%, transparent 25%),
-                linear-gradient(-45deg, #8B4513 25%, transparent 25%),
-                linear-gradient(45deg, transparent 75%, #8B4513 75%),
-                linear-gradient(-45deg, transparent 75%, #8B4513 75%);
-            background-size: 20px 20px;
-            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-        }
-
-        .pixel-grass {
-            background-color: #7CFC00;
-            background-image:
-                linear-gradient(90deg, #32CD32 50%, transparent 50%),
-                linear-gradient(transparent 50%, #32CD32 50%);
-            background-size: 10px 10px;
-        }
-
-        .pixel-stone {
-            background-color: #808080;
-            background-image:
-                linear-gradient(45deg, #A9A9A9 25%, transparent 25%),
-                linear-gradient(-45deg, #A9A9A9 25%, transparent 25%),
-                linear-gradient(45deg, transparent 75%, #A9A9A9 75%),
-                linear-gradient(-45deg, transparent 75%, #A9A9A9 75%);
-            background-size: 10px 10px;
-        }
-
-        .pixel-water {
-            background-color: #1E90FF;
-            background-image:
-                radial-gradient(circle, #00BFFF 20%, transparent 20%),
-                radial-gradient(circle, #00BFFF 20%, transparent 20%);
-            background-size: 20px 20px;
-            background-position: 0 0, 10px 10px;
-        }
-
-        .pixel-dirt {
-            background-color: #8B4513;
-        }
-
-        .game-image-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .game-image-container img {
-            transition: transform 0.3s ease;
-        }
-
-        .game-image-container:hover img {
-            transform: scale(1.05);
-        }
-
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .carousel-slide {
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-gray-100 min-h-screen pixel-bg">
     <!-- Header -->
-    <header class="bg-green-600 text-white py-6 pixel-border">
+    <header class="bg-green-600 text-green-600 py-6 pixel-border">
         <div class="container mx-auto px-4">
-            <h1 class="text-3xl md:text-4xl font-bold  text-center">快点Minecraft服务器</h1>
-            <p class="text-center mt-2 text-yellow-300">Paper 1.21.4 生存服务器</p>
-            <p class="text-center mt-3 font-bold minecraft-font">Let's Play!</p>
+            <h1 class="text-4xl md:text-4xl font-bold text-center">快点Minecraft服务器</h1>
+            <p class="text-center mt-2 text-yellow-100">Paper 1.21.4 生存服务器</p>
+            <p class="text-center mt-3 font-bold minecraft-font text-white">Let's Play!</p>
         </div>
     </header>
 
@@ -161,9 +51,9 @@
                     <i class="fas fa-chart-line mr-2"></i>服务监控
                 </a>
                 <h3 class="mt-2 text-1xl font-bold minecraft-font">本服务器使用AuthMe进行认证，游玩前请注册</h3>
-                <h3 class="mt-2 text-1xl font-bold minecraft-font">推荐使用 PLC2 启动器</h3>
-                <div class="livekit-info minecraft-font">
-                    <a href="https://www.spigotmc.org/resources/livekit.88742/">Livekit</a>服务地址：6888866.xyz:41233
+                <h3 class="mt-2 text-1xl font-bold minecraft-font">推荐使用 PCL2 启动器</h3>
+                <div class="livekit-info minecraft-font mt-2">
+                    <a href="https://www.spigotmc.org/resources/livekit.88742/">Livekit</a>：6888866.xyz:41233
                 </div>
             </div>
         </div>
