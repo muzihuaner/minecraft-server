@@ -309,7 +309,7 @@
                 refreshButton.textContent = '刷新中...';
 
                 // 使用 mcstatus.io API
-                const response = await fetch('https://api.mcstatus.io/v2/status/java/play.quickso.cn');
+                const response = await fetch('https://api.mcstatus.io/v2/status/java/frp.quickso.cn');
                 const data = await response.json();
 
                 if (data.online) {
